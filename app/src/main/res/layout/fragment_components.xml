@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_margin="6dp"
+    card_view:cardBackgroundColor="@color/grey"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="3dp"
+    card_view:contentPadding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/processor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5sp"
+                android:text="@string/processor"
+                android:textSize="18sp"
+                card_view:drawableLeftCompat="@drawable/ic_processor" />
+
+            <ProgressBar
+                android:id="@+id/scoreProcessor"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20sp"
+                android:paddingEnd="0sp"
+                android:layout_gravity="center"
+                android:max="5"
+                android:progressDrawable="@drawable/scorebar_drawable" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/processorInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5sp"
+                android:text="@string/ram"
+                android:textSize="18sp"
+                card_view:drawableLeftCompat="@drawable/ic_ram" />
+
+            <ProgressBar
+                android:id="@+id/scoreRAM"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20sp"
+                android:paddingEnd="0sp"
+                android:layout_gravity="center"
+                android:max="5"
+                android:progressDrawable="@drawable/scorebar_drawable" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ramInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

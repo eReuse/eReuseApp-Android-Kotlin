@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">eReuseApp</string>
+
+    <!-- Nombres del menu de navegacion -->
+    <string name="nav_search">Búsqueda</string>
+    <string name="nav_scan">Escáner</string>
+    <string name="nav_record">Historial</string>
+
+    <!-- Recycler view vacia -->
+    <string name="no_records">No hay dispositivos en el historial.</string>
+    <string name="no_results">No hay dispositivos que coincidan.</string>
+
+    <string name="device_image_description">Avance de la imagen del dispositivo</string>
+
+    <!-- Dialogos -->
+    <string name="accept_dialog">Aceptar</string>
+    <string name="cancel_dialog">Cancelar</string>
+    <string name="repeated_device">Este dispositivo ya está en el historial.</string>
+    <string name="warning_dialog">Cuidado!</string>
+    <string name="delete_device_dialog_msg">Quieres eliminar este dispositivo del historial?</string>
+    <string name="no_matching_ean">No hay ningún dispositivo con este código EAN.</string>
+
+    <!-- Atributos del dispositivo -->
+    <string name="processor">Procesador</string>
+    <string name="ram">Memoria (RAM)</string>
+    <string name="components">Componentes</string>
+    <string name="environmental">Ambiental</string>
+    <string name="release_date">Fecha de salida:</string>
+    <string name="manufacturer">Fabricante:</string>
+    <string name="reparability">Reparabilidad</string>
+
+    <!-- Boton i filtros de busqueda -->
+    <string name="search">Buscar</string>
+    <string name="desktop">Sobremesa</string>
+    <string name="notebooks">Portátiles</string>
+</resources>
