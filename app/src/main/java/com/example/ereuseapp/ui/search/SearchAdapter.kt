@@ -1,5 +1,6 @@
 package com.example.ereuseapp.ui.search
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +12,8 @@ import com.example.ereuseapp.R
 import com.example.ereuseapp.models.DevicePreview
 import com.squareup.picasso.Picasso
 
-class SearchAdapter(val onPreviewClick: (DevicePreview) -> Unit): RecyclerView.Adapter<SearchAdapter.SearchViewHolder>()  {
-
+class SearchAdapter(context: Context, val onPreviewClick: (DevicePreview) -> Unit): RecyclerView.Adapter<SearchAdapter.SearchViewHolder>()  {
+    private var ctx = context
     private var dataset: List<DevicePreview> = emptyList()
 
     inner class SearchViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
@@ -21,9 +22,11 @@ class SearchAdapter(val onPreviewClick: (DevicePreview) -> Unit): RecyclerView.A
         private val typeTextView: TextView = itemView.findViewById(R.id.item_type)
         private val scoreBar: ProgressBar = itemView.findViewById(R.id.scoreBar)
 
-        fun renderDevicePreview(devicePreview: DevicePreview) {
+        fun renderDevicePreview(context: Context, devicePreview: DevicePreview) {
             Picasso.get().load(devicePreview.image).into(imageView)
             titleTextView.text = devicePreview.title
+            if (devicePreview.device_type == "Notebooks") typeTextView.text = context.getString(R.string.notebooks)
+            else typeTextView.text = context.getString(R.string.desktop)
             typeTextView.text = devicePreview.device_type
             scoreBar.progress = devicePreview.score
 
@@ -39,7 +42,7 @@ class SearchAdapter(val onPreviewClick: (DevicePreview) -> Unit): RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: SearchViewHolder, position: Int) {
-        holder.renderDevicePreview(dataset[position])
+        holder.renderDevicePreview(ctx, dataset[position])
     }
 
     override fun getItemCount(): Int {

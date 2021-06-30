@@ -25,7 +25,7 @@ class DevicePreviewAdapter(context: Context, val onPreviewClick: (DevicePreview)
         fun renderDevicePreview(context: Context, devicePreview: DevicePreview) {
             Picasso.get().load(devicePreview.image).into(imageView)
             titleTextView.text = devicePreview.title
-            if (devicePreview.device_type.equals("Notebooks")) typeTextView.text = context.getString(R.string.notebooks)
+            if (devicePreview.device_type == "Notebooks") typeTextView.text = context.getString(R.string.notebooks)
             else typeTextView.text = context.getString(R.string.desktop)
             scoreBar.progress = devicePreview.score
 

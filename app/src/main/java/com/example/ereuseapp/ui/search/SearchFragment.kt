@@ -1,5 +1,6 @@
 package com.example.ereuseapp.ui.search
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,10 +17,10 @@ import com.example.ereuseapp.R
 import com.example.ereuseapp.models.DevicePreview
 import com.example.ereuseapp.ui.device.DeviceFragment
 
-class SearchFragment : Fragment() {
+class SearchFragment(context: Context) : Fragment() {
     private lateinit var recordEmptyView: View
     private lateinit var activityMain: MainActivity
-    private val adapter = SearchAdapter(this::onPreviewClick)
+    private val adapter = SearchAdapter(context, this::onPreviewClick)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val recordFragment = RecordFragment(this)
         val scanFragment = ScanFragment()
-        val searchFragment = SearchFragment()
+        val searchFragment = SearchFragment(this)
 
         changeFragment(recordFragment)
 
